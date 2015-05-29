@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'mapbox' => 'demos#mapbox'
+  get 'map' => 'demos#maps'
 end

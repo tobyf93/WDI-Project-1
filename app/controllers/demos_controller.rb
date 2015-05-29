@@ -1,4 +1,4 @@
 class DemosController < ApplicationController
-  def mapbox
+  def maps
   end
 end
