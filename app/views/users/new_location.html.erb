@@ -1,9 +1,15 @@
 <!-- Set javascript data for use in map -->
 <%= javascript_tag do %>
   var userPos = undefined; 
+  var items = []
+  var iconPath = "<%= asset_path 'star.png' %>"
 
   <% if @current_user.latitude %>
     var userPos = {lat: <%= @current_user.latitude %>, lng: <%= @current_user.longitude %>}
+  <% end %>
+
+  <% @items.each do |item| %>
+    items.push({lat: <%= item.latitude %>, lng: <%= item.longitude %>});
   <% end %>
 <% end %>
 

@@ -43,7 +43,8 @@ end
 
 
 gem 'remove_turbolinks'
-gem 'mapbox-rails'
+gem 'cloudinary'
+
 group :development do
   gem 'pry-rails'
   gem 'pry-stack_explorer'

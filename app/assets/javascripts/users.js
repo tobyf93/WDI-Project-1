@@ -1,4 +1,7 @@
 var initialize = function() {
+
+
+
   var $latitudeDisplay = $('#latitude');
   var $longitudeDisplay = $('#longitude');
   var defaultPos = {lat: -33.76281, lng: 151.298816};
@@ -20,24 +23,35 @@ var initialize = function() {
     map: map
   });
 
-  circle = new google.maps.Circle({
-          map: map,
-          clickable: false,
-          radius: 100,
-          fillColor: '#fff',
-          fillOpacity: 0.6,
-          strokeColor: '#313131',
-          strokeOpacity: 0.4,
-          strokeWeight: 0.8
-      });
+  userBoundary = new google.maps.Circle({
+    map: map,
+    clickable: false,
+    radius: 100,
+    fillColor: '#fff',
+    fillOpacity: 0.6,
+    strokeColor: '#313131',
+    strokeOpacity: 0.4,
+    strokeWeight: 0.8,
+  });
 
   // attach circle to userMarker
-  circle.bindTo('center', userMarker, 'position');
+  userBoundary.bindTo('center', userMarker, 'position');
 
   google.maps.event.addListener(userMarker, 'drag', function() {
     var markerPos = userMarker.getPosition();
     $latitudeDisplay.val(markerPos.A);
     $longitudeDisplay.val(markerPos.F);
   });
+
+  items.forEach(function(item) {
+    new google.maps.Marker({
+      position: item,
+      icon: iconPath,
+      map: map
+    });
+  });
+
+
+
 };
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -31,6 +31,7 @@ class UsersController < ApplicationController
   end
 
   def new_location
+    @items = Item.all
   end
 
   def set_location
