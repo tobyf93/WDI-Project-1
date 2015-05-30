@@ -20,13 +20,22 @@
     </div>
 
     <ul class="nav navbar-nav pull-right">
-      <li><a href="<%= signup_path %>">Sign Up</a></li>
-      <li><a href="<%= login_path %>">Login</a></li>
+      <% if @current_user.present? %>
+        <p class="navbar-text">Welcome <%= @current_user.username %>!</p>
+        <li><a href="<%= users_path %>">View Users</a></li>
+        <li><a href="<%= user_newlocation_path @current_user %>">Edit Location</a></li>
+        <li><%= button_to 'Logout', logout_path, :form_class => 'navbar-form', :class => 'btn btn-default', :method => :delete %></li>
+      <% else %>
+        <li><a href="<%= signup_path %>">Sign Up</a></li>
+        <li><a href="<%= login_path %>">Login</a></li>
+      <% end %>
     </ul>
   </div>
 </nav>
 
-<%= yield %>
+<div id="wrapper" class="container-fluid">
+  <%= yield %>
+</div>
 
 </body>
 </html>

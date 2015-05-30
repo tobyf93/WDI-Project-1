@@ -14,7 +14,7 @@
 #           signup GET    /signup(.:format)                     users#new
 #            login GET    /login(.:format)                      session#new
 #                  POST   /login(.:format)                      session#create
-#                  DELETE /login(.:format)                      session#destroy
+#           logout DELETE /logout(.:format)                     session#destroy
 #       demos_maps GET    /demos/maps(.:format)                 demos#maps
 #
 
