@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ddfua301o
+  api_key: '621711638866676'
+  api_secret: wuKco3h8WKhfXBZy7IPsaIIGKqk
+  enhance_image_tag: false
+  static_image_support: false
+production:
+  cloud_name: ddfua301o
+  api_key: '621711638866676'
+  api_secret: wuKco3h8WKhfXBZy7IPsaIIGKqk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ddfua301o
+  api_key: '621711638866676'
+  api_secret: wuKco3h8WKhfXBZy7IPsaIIGKqk
+  enhance_image_tag: true
+  static_image_support: false

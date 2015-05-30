@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :users, :except => [:new] do 
     get 'location' => 'users#new_location', :as => 'location'
     post 'location' => 'users#set_location', :as => nil
+    resources :items
   end
 
   get 'signup' => 'users#new'
