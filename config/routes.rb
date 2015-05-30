@@ -13,6 +13,10 @@
 #
 
 Rails.application.routes.draw do
+  root :to => 'pages#home'
+
+  get 'home' => 'pages#home'
+
   resources :users do 
     get 'newlocation' => 'users#new_location'
   end
