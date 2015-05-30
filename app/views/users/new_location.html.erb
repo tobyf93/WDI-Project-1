@@ -1,9 +1,5 @@
 <style type="text/css">
-html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-
-form {
-  z-index: 999999;
-}
+html, body, #mapCanvas { height: 100%; padding: 0;}
 </style>
 
 <script type="text/javascript">
@@ -13,7 +9,7 @@ form {
       zoom: 15
     };
 
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
+    var map = new google.maps.Map(document.getElementById('mapCanvas'),
         mapOptions);
 
     // Markers
@@ -51,14 +47,16 @@ form {
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
-<%= form_tag(user_location_path, :id => 'location', :class => 'form-inline') do %>
-  <%= label_tag :latitude %>
-  <%= text_field_tag :latitude, nil, :class => 'form-control' %>
+<div id="locationWell" class="well">
+  <%= form_tag(user_location_path, :id => 'location', :class => 'form-inline') do %>
+    <%= label_tag :latitude %>
+    <%= text_field_tag :latitude, nil, :class => 'form-control' %>
 
-  <%= label_tag :longitude %>
-  <%= text_field_tag :longitude, nil, :class => 'form-control' %>
+    <%= label_tag :longitude %>
+    <%= text_field_tag :longitude, nil, :class => 'form-control' %>
 
-  <%= submit_tag 'Set Location', :class => 'btn btn-default' %>
-<% end %>
+    <%= submit_tag 'Set Location', :class => 'btn btn-default' %>
+  <% end %>
+</div>
 
-<div id="map-canvas"></div>
+<div id="mapCanvas"></div>
