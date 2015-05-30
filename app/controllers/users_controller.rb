@@ -19,4 +19,10 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  def new_location
+  end
+
+  def set_location
+  end
 end

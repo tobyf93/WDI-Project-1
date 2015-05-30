@@ -13,7 +13,9 @@
 #
 
 Rails.application.routes.draw do
-  resources :users
+  resources :users do 
+    get 'newlocation' => 'users#new_location'
+  end
 
   # Demos
   get 'demos/maps' => 'demos#maps'
