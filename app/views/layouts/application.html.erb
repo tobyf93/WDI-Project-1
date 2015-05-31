@@ -26,6 +26,7 @@
         <p class="navbar-text">Welcome <%= @current_user.username %>!</p>
         <li><a href="<%= users_path %>">View Users</a></li>
         <li><a href="<%= new_user_item_path @current_user %>">Create Item</a></li>
+        <li><a href="<%= user_items_path @current_user %>">All Items</a></li>
         <li><a href="<%= user_location_path @current_user %>">Edit Location</a></li>
         <li><%= button_to 'Logout', logout_path, :form_class => 'navbar-form', :class => 'btn btn-default', :method => :delete %></li>
       <% else %>
