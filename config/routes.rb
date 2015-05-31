@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   get 'login' => 'session#new'
   post 'login' => 'session#create'
   delete 'logout' => 'session#destroy'
+  get 'discover' => 'pages#discover'
 
   # Demos
   get 'demos/maps' => 'demos#maps'

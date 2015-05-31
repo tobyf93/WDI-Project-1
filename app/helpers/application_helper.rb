@@ -17,6 +17,7 @@ module ApplicationHelper
 
     if @current_user.present?
       html << "<p class='navbar-text'>Welcome #{@current_user.username}!</p>"
+      html << "<li><a href='#'>Discover</a></li>"
       html << "<li><a href='#{new_user_item_path @current_user}'>Create Item</a></li>"
       html << "<li><a href='#{user_items_path @current_user}'>All Items</a></li>"
     end
