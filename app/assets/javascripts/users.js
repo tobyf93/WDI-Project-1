@@ -1,24 +1,21 @@
 var initialize = function() {
-
-
-
   var $latitudeDisplay = $('#latitude');
   var $longitudeDisplay = $('#longitude');
   var defaultPos = {lat: -33.76281, lng: 151.298816};
 
   // Update latlng displays
-  $latitudeDisplay.val(userPos.lat || defaultPos.lat);
-  $longitudeDisplay.val(userPos.lng || defaultPos.lng);
+  $latitudeDisplay.val(gon.userPos.lat || defaultPos.lat);
+  $longitudeDisplay.val(gon.userPos.lng || defaultPos.lng);
 
   var mapOptions = {
-    center: userPos || defaultPos,
+    center: gon.userPos || defaultPos,
     zoom: 15
   };
 
   var map = new google.maps.Map(document.getElementById('mapCanvas'), mapOptions);
 
   var userMarker = new google.maps.Marker({
-    position: userPos || defaultPos,
+    position: gon.userPos || defaultPos,
     draggable: true,
     map: map
   });
@@ -43,10 +40,10 @@ var initialize = function() {
     $longitudeDisplay.val(markerPos.F);
   });
 
-  items.forEach(function(item) {
+  gon.items.forEach(function(item) {
     new google.maps.Marker({
       position: item,
-      icon: iconPath,
+      icon: gon.iconPath,
       map: map
     });
   });

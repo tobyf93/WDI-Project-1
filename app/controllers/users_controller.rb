@@ -31,7 +31,14 @@ class UsersController < ApplicationController
   end
 
   def new_location
-    @items = Item.all
+    # Setup javascript data
+    gon.items = []
+    gon.iconPath = ActionController::Base.helpers.asset_path 'star.png'
+    gon.userPos = {:lat => @current_user.latitude, :lng => @current_user.longitude}
+
+    Item.all.each do |item|
+      gon.items << {:lat => item.latitude, :lng => item.longitude}
+    end
   end
 
   def set_location

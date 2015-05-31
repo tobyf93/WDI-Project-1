@@ -44,6 +44,7 @@ end
 
 gem 'remove_turbolinks'
 gem 'cloudinary'
+gem 'gon'
 
 group :development do
   gem 'pry-rails'
