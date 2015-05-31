@@ -6,3 +6,15 @@ html, body {
   margin-top: 50px;
   height: 100%;
 }
+
+.navbar-brand {
+  padding: 5px;
+}
+
+.navbar-brand.text {
+  padding: 15px;
+}
+
+.navbar-brand > img {
+  height: 40px;
+}

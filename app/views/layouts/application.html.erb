@@ -9,7 +9,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <%= favicon_link_tag 'usb.ico' %>
   
 </head>
 <body>
@@ -18,22 +18,11 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
-      <a class="navbar-brand" href="<%= root_path %>">DeadDrops</a>
+      <a class="navbar-brand" href="<%= root_path %>"><img src="<%= asset_path 'usb.png' %>" alt=""></a>
+      <a class="navbar-brand text" href="<%= root_path %>">DeadDrops</a>
     </div>
 
-    <ul class="nav navbar-nav pull-right">
-      <% if @current_user.present? %>
-        <p class="navbar-text">Welcome <%= @current_user.username %>!</p>
-        <li><a href="<%= users_path %>">View Users</a></li>
-        <li><a href="<%= new_user_item_path @current_user %>">Create Item</a></li>
-        <li><a href="<%= user_items_path @current_user %>">All Items</a></li>
-        <li><a href="<%= user_location_path @current_user %>">Edit Location</a></li>
-        <li><%= button_to 'Logout', logout_path, :form_class => 'navbar-form', :class => 'btn btn-default', :method => :delete %></li>
-      <% else %>
-        <li><a href="<%= signup_path %>">Sign Up</a></li>
-        <li><a href="<%= login_path %>">Login</a></li>
-      <% end %>
-    </ul>
+    <%== navigation %>
   </div>
 </nav>
 
