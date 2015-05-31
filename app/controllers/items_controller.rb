@@ -15,6 +15,7 @@ class ItemsController < ApplicationController
       item.latitude = @current_user.latitude
       item.longitude = @current_user.longitude
       item.user_id = @current_user.id
+      item.cl_id = cl_info['public_id']
       item.save
     end
   end
