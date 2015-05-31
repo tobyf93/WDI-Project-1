@@ -24,6 +24,7 @@
 #          login GET    /login(.:format)                         session#new
 #                POST   /login(.:format)                         session#create
 #         logout DELETE /logout(.:format)                        session#destroy
+#       discover GET    /discover(.:format)                      pages#discover
 #     demos_maps GET    /demos/maps(.:format)                    demos#maps
 #
 

@@ -31,21 +31,15 @@ class UsersController < ApplicationController
   end
 
   def new_location
-    # Setup javascript data
-    gon.items = []
-    gon.iconPath = ActionController::Base.helpers.asset_path 'star.png'
-    gon.userPos = {:lat => @current_user.latitude, :lng => @current_user.longitude}
-
-    Item.all.each do |item|
-      gon.items << {:lat => item.latitude, :lng => item.longitude}
-    end
+    gon_googlemaps
+    gon.draggable = true
   end
 
   def set_location
     @current_user.latitude = params[:latitude]
     @current_user.longitude = params[:longitude]
     @current_user.save
-    redirect_to root_path
+    redirect_to discover_path
   end
 
   private

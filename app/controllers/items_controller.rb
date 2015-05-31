@@ -18,6 +18,8 @@ class ItemsController < ApplicationController
       item.cl_id = cl_info['public_id']
       item.save
     end
+
+    redirect_to discover_path
   end
 
   def new

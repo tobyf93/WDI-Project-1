@@ -16,7 +16,7 @@ var initialize = function() {
 
   var userMarker = new google.maps.Marker({
     position: gon.userPos || defaultPos,
-    draggable: true,
+    draggable: gon.draggable,
     map: map
   });
 
@@ -51,4 +51,5 @@ var initialize = function() {
 
 
 };
-google.maps.event.addDomListener(window, 'load', initialize);
+
+if (gon._enabled)google.maps.event.addDomListener(window, 'load', initialize);

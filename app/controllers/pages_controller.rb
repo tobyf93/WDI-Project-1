@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def discover
+    gon_googlemaps
   end
 end
