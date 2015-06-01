@@ -1,3 +1,12 @@
-#mapCanvas.discover {
-  height: 728px;
+#discover {
+  margin-top: 20px;
+}
+
+#discover #mapCanvas {
+  height: 428px;
+  border-radius: 4px;
+}
+
+#discover #filePreview {
+  height: 695px;
 }
