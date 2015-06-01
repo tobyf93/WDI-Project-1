@@ -1,3 +1,20 @@
+var heatmapData = [
+  new google.maps.LatLng(37.782, -122.447),
+  new google.maps.LatLng(37.782, -122.445),
+  new google.maps.LatLng(37.782, -122.443),
+  new google.maps.LatLng(37.782, -122.441),
+  new google.maps.LatLng(37.782, -122.439),
+  new google.maps.LatLng(37.782, -122.437),
+  new google.maps.LatLng(37.782, -122.435),
+  new google.maps.LatLng(37.785, -122.447),
+  new google.maps.LatLng(37.785, -122.445),
+  new google.maps.LatLng(37.785, -122.443),
+  new google.maps.LatLng(37.785, -122.441),
+  new google.maps.LatLng(37.785, -122.439),
+  new google.maps.LatLng(37.785, -122.437),
+  new google.maps.LatLng(37.785, -122.435)
+];
+
 var initialize = function() {
   var $latitudeDisplay = $('#latitude');
   var $longitudeDisplay = $('#longitude');
@@ -7,8 +24,9 @@ var initialize = function() {
   $latitudeDisplay.val(gon.userPos.lat || defaultPos.lat);
   $longitudeDisplay.val(gon.userPos.lng || defaultPos.lng);
 
+  var sanFrancisco = new google.maps.LatLng(37.774546, -122.433523);
   var mapOptions = {
-    center: gon.userPos || defaultPos,
+    center: sanFrancisco,//gon.userPos || defaultPos,
     zoom: 15
   };
 
@@ -48,7 +66,10 @@ var initialize = function() {
     });
   });
 
-
+  var heatmap = new google.maps.visualization.HeatmapLayer({
+  data: heatmapData
+});
+heatmap.setMap(map);
 
 };
 
