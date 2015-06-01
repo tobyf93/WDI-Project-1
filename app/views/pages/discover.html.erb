@@ -9,7 +9,7 @@
         <div class="list-group">
           <a href="#" class="list-group-item active">Selected will looks like this</a>
           <% @items.each do |item|%>
-            <a href="#" class="list-group-item"><%= item.name %></a>
+            <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>"><%= item.name %></a>
           <% end %>
         </div>
       </div>
@@ -27,7 +27,7 @@
   <!-- Second Half - File Preview-->
   <div class="col-md-6">
     <div id="filePreview"class="container-fluid well">
-      File Preview Will Be Here
+      <%= cl_image_tag("bdpat46cheeahpqmvltx") %>
     </div>
   </div>
 </div>
