@@ -10,6 +10,7 @@
 #discover #filePreview {
   height: 695px;
   position: relative;
+  /*background-image: url('http://res.cloudinary.com/ddfua301o/image/upload/bdpat46cheeahpqmvltx');*/
 }
 
 #filePreview img {
@@ -21,4 +22,9 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+#fileList {
+  height: 247px;
+  overflow: scroll;
 }
