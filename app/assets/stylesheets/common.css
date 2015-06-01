@@ -22,3 +22,7 @@ html, body {
 .navbar-brand > img {
   height: 40px;
 }
+
+#avatar {
+  border-radius: 20px;
+}
