@@ -1,19 +1,3 @@
-var heatmapData = [
-  new google.maps.LatLng(37.782, -122.447),
-  new google.maps.LatLng(37.782, -122.445),
-  new google.maps.LatLng(37.782, -122.443),
-  new google.maps.LatLng(37.782, -122.441),
-  new google.maps.LatLng(37.782, -122.439),
-  new google.maps.LatLng(37.782, -122.437),
-  new google.maps.LatLng(37.782, -122.435),
-  new google.maps.LatLng(37.785, -122.447),
-  new google.maps.LatLng(37.785, -122.445),
-  new google.maps.LatLng(37.785, -122.443),
-  new google.maps.LatLng(37.785, -122.441),
-  new google.maps.LatLng(37.785, -122.439),
-  new google.maps.LatLng(37.785, -122.437),
-  new google.maps.LatLng(37.785, -122.435)
-];
 
 var initialize = function() {
   var $latitudeDisplay = $('#latitude');
@@ -26,7 +10,7 @@ var initialize = function() {
 
   var sanFrancisco = new google.maps.LatLng(37.774546, -122.433523);
   var mapOptions = {
-    center: sanFrancisco,//gon.userPos || defaultPos,
+    center: gon.userPos || defaultPos,
     zoom: 15
   };
 
@@ -58,19 +42,17 @@ var initialize = function() {
     $longitudeDisplay.val(markerPos.F);
   });
 
+  var heatmapData = [];
   gon.items.forEach(function(item) {
-    new google.maps.Marker({
-      position: item,
-      icon: gon.iconPath,
-      map: map
-    });
+    heatmapData.push(new google.maps.LatLng(item.lat, item.lng))
   });
 
   var heatmap = new google.maps.visualization.HeatmapLayer({
   data: heatmapData
 });
-heatmap.setMap(map);
 
+heatmap.set('radius', 20);
+heatmap.setMap(map);
 };
 
 if (gon._enabled)google.maps.event.addDomListener(window, 'load', initialize);
