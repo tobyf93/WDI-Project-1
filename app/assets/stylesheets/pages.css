@@ -10,10 +10,9 @@
 #discover #filePreview {
   height: 695px;
   position: relative;
-  /*background-image: url('http://res.cloudinary.com/ddfua301o/image/upload/bdpat46cheeahpqmvltx');*/
 }
 
-#filePreview img {
+#discover #filePreview img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,9 +21,11 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  max-height: 90%;
+  max-width: 90%;
 }
 
-#fileList {
+#discover #fileList {
   height: 247px;
   overflow: scroll;
 }
