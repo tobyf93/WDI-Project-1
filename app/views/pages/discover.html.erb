@@ -7,12 +7,8 @@
       <!-- File List -->
       <div class="row">
         <div id="fileList" class="list-group">
-          <% @items.each do |item|%>
+          <% @items.reverse_each do |item|%>
             <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>"><%= item.name %></a>
-          <% end %>
-          
-          <% 10.times do %>
-            <a href="#" class="list-group-item">TEST</a>
           <% end %>
         </div>
       </div>

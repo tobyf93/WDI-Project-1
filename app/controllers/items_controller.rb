@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
 
     if cl_info
       item = Item.new
-      item.name = file.original_filename
+      item.name = params[:file_name]
       item.media_type = file.content_type
       item.latitude = @current_user.latitude
       item.longitude = @current_user.longitude

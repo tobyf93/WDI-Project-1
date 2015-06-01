@@ -1,6 +1,12 @@
 <h1>Create Item</h1>
 <%= form_tag({:controller => :items, :action => :create}, {:multipart => true}) do %>
+  
+  <%= label_tag :file_name %>
+  <%= text_field_tag :file_name %>
+
+  <%= label_tag :file %>
   <%= file_field_tag :file %>
+  
   <%= submit_tag 'Upload' %>
 
 <% end %>
