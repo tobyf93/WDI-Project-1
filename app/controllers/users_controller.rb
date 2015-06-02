@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     @current_user.use_geoloc = params[:use_geoloc]
     @current_user.latitude = params[:latitude]
     @current_user.longitude = params[:longitude]
+
     @current_user.save
     redirect_to discover_path
   end
