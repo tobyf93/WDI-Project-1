@@ -6,6 +6,8 @@
     <%= label_tag :longitude %>
     <%= text_field_tag :longitude, nil, :class => 'form-control' %>
 
+    <%= check_box_tag :use_geoloc %>
+
     <%= submit_tag 'Set Location', :class => 'btn btn-default' %>
   <% end %>
 </div>
