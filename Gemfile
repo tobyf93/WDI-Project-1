@@ -45,6 +45,8 @@ end
 gem 'remove_turbolinks'
 gem 'cloudinary'
 gem 'gon'
+gem 'geocoder'
+
 gem 'rails_12factor', group: :production
 
 group :development do

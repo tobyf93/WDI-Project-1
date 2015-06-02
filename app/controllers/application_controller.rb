@@ -7,11 +7,10 @@ class ApplicationController < ActionController::Base
     gon.items = []
     gon.iconPath = ActionController::Base.helpers.asset_path 'star.png'
 
-    encodedLocation = cookies[:location];
+    user_location = get_user_location
 
-    if encodedLocation.present?
-      location_str = Base64.decode64(cookies[:location]);
-      coords = location_str.split(',');
+    if user_location.present?
+      coords = user_location.split(',');
       gon.userPos = {:lat => coords[0].to_f, :lng => coords[1].to_f}
     end
 
@@ -22,6 +21,21 @@ class ApplicationController < ActionController::Base
     Item.all.each do |item|
       gon.items << {:lat => item.latitude, :lng => item.longitude}
     end
+  end
+
+  def get_user_location
+    result = nil
+    encodedLocation = cookies[:location];
+
+    if encodedLocation.present?
+      result = Base64.decode64(cookies[:location]);
+    end
+
+    if !@current_user.use_geoloc?
+      result = "#{@current_user.latitude},#{@current_user.longitude}"
+    end
+
+    result
   end
 
   private

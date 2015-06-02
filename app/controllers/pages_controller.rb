@@ -3,7 +3,13 @@ class PagesController < ApplicationController
   end
 
   def discover
-    @items = Item.all
+    @items = nil
+    user_location = get_user_location
+
+    if user_location.present?
+      @items = Item.near(user_location, 0.1, :units => :km)
+    end
+
     gon_googlemaps
   end
 end
