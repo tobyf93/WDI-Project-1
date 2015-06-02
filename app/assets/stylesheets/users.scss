@@ -8,11 +8,13 @@
 
 
 #locationWell {
-  width: 627px;
+  // width: 627px;
   position: absolute;
   z-index: 99999;
   left: 50%;
-  @include vendor-prefix(transform, translate(-50%, 15%));
+  margin-top: 15px;
+  margin-left: -395px;
+  // @include vendor-prefix(transform, translate(-50%, 15%));
   background-color: rgba(245, 245, 245, 0.7);
 }
 

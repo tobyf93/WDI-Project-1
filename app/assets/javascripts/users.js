@@ -1,7 +1,10 @@
-
 var initialize = function() {
   var $latitudeDisplay = $('#latitude');
   var $longitudeDisplay = $('#longitude');
+
+  var $geolocToggle = $("[name='use_geoloc']");
+  $geolocToggle.bootstrapSwitch({labelText: 'GeoLocation'});
+  $geolocToggle.on('switchChange.bootstrapSwitch', 0);
 
   // Update latlng displays
   console.log(gon.userPos);
@@ -44,7 +47,7 @@ var initialize = function() {
 
   var heatmapData = [];
   gon.items.forEach(function(item) {
-    heatmapData.push(new google.maps.LatLng(item.lat, item.lng))
+    heatmapData.push(new google.maps.LatLng(item.lat, item.lng));
   });
 
   var heatmap = new google.maps.visualization.HeatmapLayer({
