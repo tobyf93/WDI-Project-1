@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
       gon.userPos = {:lat => coords[0].to_f, :lng => coords[1].to_f}
     end
 
-    if @current_user.use_geoloc?
+    if !@current_user.use_geoloc?
       gon.userPos = {:lat => @current_user.latitude, :lng => @current_user.longitude}
     end
 
