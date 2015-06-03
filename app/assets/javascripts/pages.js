@@ -1,8 +1,12 @@
 $(document).ready(function() {
   $('html').on('click', '#fileList a', previewFile);
   $('#discover #fileUpload').on('change', function() { 
-    var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
-    $('#discover #fileName').val(filename);
+    var $input = $(this),
+    numFiles = $input.get(0).files ? $input.get(0).files.length : 1,
+    label = $input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    $input.trigger('fileselect', [numFiles, label]);
+
+    $('#discover #fileName').attr('placeholder', label);
   });
 });
 
