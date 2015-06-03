@@ -7,8 +7,7 @@
       <!-- File List -->
       <div id="fileList" class="row">
         <% if @items.present? %>
-        <!-- class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" -->
-          <%= button_to '+', '#', :method => :get, :class => 'btn btn-lg btn-success', :data => {:toggle => 'modal', :target => '#myModal'} %>
+          <button type="button" id="addBtn" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">+</button>
           <div class="list-group">
             <% @items.reverse_each do |item|%>
               <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>"><%= item.name %></a>
