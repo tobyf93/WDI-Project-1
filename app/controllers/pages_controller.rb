@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :authorize_user, :only => [:discover]
+
   def home
   end
 

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery :with => :exception
   before_action :authenticate, :create_gon_hash
 
   def gon_googlemaps
@@ -41,6 +41,20 @@ class ApplicationController < ActionController::Base
   private
   def authenticate
     @current_user = User.find session[:user_id] if session[:user_id]
+  end
+
+  def authorize_user
+    if @current_user.blank?
+      redirect_to root_path
+    end
+  end
+
+  def authorize_admin
+    if @current_user.blank?
+      redirect_to root_path
+    elsif !@current_user.admin?
+      redirect_to discover_path
+    end
   end
 
   # Forces gon object to be created for javascript.  Javascript files should check

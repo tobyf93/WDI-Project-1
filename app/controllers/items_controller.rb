@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :authorize_user
+
   def index
     @user = @current_user
   end

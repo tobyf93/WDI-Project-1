@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize_admin, :except => [:new]
+
   def index
     @users = User.all
   end

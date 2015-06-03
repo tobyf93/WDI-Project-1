@@ -1,4 +1,6 @@
 class SessionController < ApplicationController
+  before_action :authorize_user, :only => [:destroy]
+
   # Login form
   def new
   end
