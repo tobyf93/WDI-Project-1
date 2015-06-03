@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $.removeCookie('location');
   navigator.geolocation.getCurrentPosition(success, error, options);
 });
 
