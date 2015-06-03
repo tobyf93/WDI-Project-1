@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def discover
-    @items = nil
+    @items = []
     user_location = get_user_location
 
     if user_location.present?

@@ -5,12 +5,20 @@
     <div class="container-fluid">
 
       <!-- File List -->
-      <div class="row">
-        <div id="fileList" class="list-group">
-          <% @items.reverse_each do |item|%>
-            <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>"><%= item.name %></a>
-          <% end %>
-        </div>
+      <div id="fileList" class="row">
+        <% if @items.present? %>
+          <div class="list-group">
+            <% @items.reverse_each do |item|%>
+              <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>"><%= item.name %></a>
+            <% end %>
+          </div>
+        <% else %>
+          <div id="message">
+            <h1>Hmmmmmm...</h1>
+            <h3>No Users Have Written Files Here</h3>
+            <%= link_to 'Be The First!', new_user_item_path(@current_user.id), :class => 'btn btn-success btn-lg' %>
+          </div>
+        <% end %>
       </div>
 
       <!-- Google Map -->

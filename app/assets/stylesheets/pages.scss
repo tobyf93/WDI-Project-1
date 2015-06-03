@@ -32,4 +32,13 @@
 #discover #fileList {
   height: 247px;
   overflow: scroll;
+  margin-bottom: 20px;
+}
+
+#discover #fileList #message {
+  border: 4px dotted #f5f5f5;
+  height: 100%;
+  text-align: center;
+  padding-top: 25px;
+  border-radius: 4px;
 }

@@ -3,7 +3,6 @@ var initialize = function() {
   var $longitudeDisplay = $('#longitude');
 
   // Update latlng displays
-  console.log(gon.userPos);
   $latitudeDisplay.val(gon.userPos.lat || defaultPos.lat);
   $longitudeDisplay.val(gon.userPos.lng || defaultPos.lng);
 
