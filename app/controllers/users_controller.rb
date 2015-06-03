@@ -38,7 +38,8 @@ class UsersController < ApplicationController
   end
 
   def set_location
-    @current_user.use_geoloc = params[:use_geoloc]
+    use_geoloc = params[:use_geoloc]? true : false
+    @current_user.use_geoloc = use_geoloc
     @current_user.latitude = params[:latitude]
     @current_user.longitude = params[:longitude]
 

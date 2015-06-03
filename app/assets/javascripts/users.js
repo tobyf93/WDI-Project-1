@@ -3,19 +3,18 @@ var initialize = function() {
   var $longitudeDisplay = $('#longitude');
 
   // Update latlng displays
-  $latitudeDisplay.val(gon.userPos.lat || defaultPos.lat);
-  $longitudeDisplay.val(gon.userPos.lng || defaultPos.lng);
+  $latitudeDisplay.val(gon.userPos.lat);
+  $longitudeDisplay.val(gon.userPos.lng);
 
-  var sanFrancisco = new google.maps.LatLng(37.774546, -122.433523);
   var mapOptions = {
-    center: gon.userPos || defaultPos,
+    center: gon.userPos,
     zoom: 15
   };
 
   var map = new google.maps.Map(document.getElementById('mapCanvas'), mapOptions);
 
   var userMarker = new google.maps.Marker({
-    position: gon.userPos || defaultPos,
+    position: gon.userPos,
     draggable: gon.draggable,
     map: map
   });
@@ -57,11 +56,9 @@ var initialize = function() {
   $geolocToggle.on('switchChange.bootstrapSwitch', function(event, state) {
     $textFields = $('#location [type="text"]');
     if (state) {
-      console.log('state true');
       $textFields.attr('disabled', 'disabled');
       userMarker.draggable = false;
     } else {
-      console.log('state false');
       $textFields.removeAttr('disabled');
       userMarker.draggable = true;
     }
