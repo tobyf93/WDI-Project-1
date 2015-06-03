@@ -19,8 +19,8 @@ module ApplicationHelper
       html << "<p class='navbar-text'>#{@current_user.username}</p>"
       html << "<li class='navbar-brand'><img id='avatar' src='#{asset_path 'avatar.png'}'></li>"
       html << "<li><a href='#{discover_path}'>Discover</a></li>"
-      html << "<li><a href='#{new_user_item_path @current_user}'>Create Item</a></li>"
-      html << "<li><a href='#{user_items_path @current_user}'>All Items</a></li>"
+      html << "<li><a href='#{new_item_path}'>Create Item</a></li>"
+      html << "<li><a href='#{items_path}'>All Items</a></li>"
     end
 
     html
@@ -35,7 +35,7 @@ module ApplicationHelper
       html << '<ul class="dropdown-menu" role="menu">'
 
       html << "<li><a href='#{users_path}'>View Users</a></li>"
-      html << "<li><a href='#{user_location_path @current_user}'>Edit Location</a></li>"
+      html << "<li><a href='#{location_path}'>Edit Location</a></li>"
 
       html << '</ul></li>'
     end
