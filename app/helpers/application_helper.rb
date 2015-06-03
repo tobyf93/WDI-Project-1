@@ -19,8 +19,8 @@ module ApplicationHelper
       html << "<p class='navbar-text'>#{@current_user.username}</p>"
       html << "<li class='navbar-brand'><img id='avatar' src='#{asset_path 'avatar.png'}'></li>"
       html << "<li><a href='#{discover_path}'>Discover</a></li>"
-      html << "<li><a href='#{new_item_path}'>Create Item</a></li>"
-      html << "<li><a href='#{items_path}'>All Items</a></li>"
+      # html << "<li><a href='#{new_item_path}'>Create Item</a></li>"
+      html << "<li><a href='#{items_path}'>My Uploads</a></li>"
     end
 
     html
