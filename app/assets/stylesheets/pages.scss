@@ -59,8 +59,12 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin-top: 5px;
 }
+
+#discover .input-group {
+  margin-top: 5px;
+}
+
 .btn-file input[type=file] {
     position: absolute;
     top: 0;
