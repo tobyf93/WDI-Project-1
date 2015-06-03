@@ -7,6 +7,7 @@
       <!-- File List -->
       <div id="fileList" class="row">
         <% if @items.present? %>
+          <%= button_to '+', nil, :class => 'btn btn-lg btn-success' %>
           <div class="list-group">
             <% @items.reverse_each do |item|%>
               <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>"><%= item.name %></a>

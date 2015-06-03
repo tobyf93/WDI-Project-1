@@ -33,6 +33,7 @@
   height: 247px;
   overflow: scroll;
   margin-bottom: 20px;
+  position: relative;
 }
 
 #discover #fileList #message {
@@ -41,4 +42,12 @@
   text-align: center;
   padding-top: 25px;
   border-radius: 4px;
+}
+
+#discover #fileList form {
+  position: absolute;
+  height: 20px;
+  z-index: 999;
+  top: 5px;
+  right: 5px;
 }
