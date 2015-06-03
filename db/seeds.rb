@@ -30,6 +30,6 @@ Item.create!([
   {name: "Stella Halena", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 2, cl_id: "stella_db3mqa"}
 ])
 User.create!([
-  {username: "joe", first_name: nil, last_name: nil, password_digest: "$2a$10$oRLEhJ6RR5aUB3e6wTolNe9y3MliWGrM5sUK4WFne9eJCrHaDZPRa", admin: false, avatar: nil, use_geoloc: true, latitude: nil, longitude: nil},
-  {username: "tobyf93", first_name: nil, last_name: nil, password_digest: "$2a$10$2OjyTcXm1iD4pgnS2KgGxeKQazR3DmhU5sa4kGaNLiStOHTPVYBpS", admin: true, avatar: nil, use_geoloc: nil, latitude: -33.8696229533068, longitude: 151.206085053967}
+  {username: "joe", password_digest: "$2a$10$oRLEhJ6RR5aUB3e6wTolNe9y3MliWGrM5sUK4WFne9eJCrHaDZPRa", admin: false, avatar: nil, use_geoloc: true, latitude: nil, longitude: nil},
+  {username: "tobyf93", password_digest: "$2a$10$2OjyTcXm1iD4pgnS2KgGxeKQazR3DmhU5sa4kGaNLiStOHTPVYBpS", admin: true, avatar: nil, use_geoloc: true, latitude: nil, longitude: nil}
 ])

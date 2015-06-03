@@ -4,8 +4,6 @@
 #
 #  id              :integer          not null, primary key
 #  username        :string
-#  first_name      :string
-#  last_name       :string
 #  password_digest :string
 #  admin           :boolean          default(FALSE)
 #  avatar          :string
