@@ -25,9 +25,9 @@ Item.create!([
   {name: "Connie Gigi", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "z0sb78jby08oj3biadnh"},
   {name: "Rodney Sue-San", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "b5a0qscbal8aynsjhevi"},
   {name: "WDI9", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "rxeobsifesn80rfxgy8l"},
-  {name: "Stella Helena", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "fkro21adh9itzbmcqwnm"},
   {name: "Joel Turnbull", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "q84prpa4gm2fan0u3j6c"},
-  {name: "Jack Jeffress", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "jwcjvrzsgynzy6srvo7a"}
+  {name: "Jack Jeffress", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "jwcjvrzsgynzy6srvo7a"},
+  {name: "Stella Halena", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 1, cl_id: "stella_db3mqa"}
 ])
 User.create!([
   {username: "joe", first_name: nil, last_name: nil, password_digest: "$2a$10$oRLEhJ6RR5aUB3e6wTolNe9y3MliWGrM5sUK4WFne9eJCrHaDZPRa", admin: false, avatar: nil, use_geoloc: true, latitude: nil, longitude: nil},
