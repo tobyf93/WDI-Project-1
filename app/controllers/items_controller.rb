@@ -9,11 +9,13 @@ class ItemsController < ApplicationController
     cl_info = Cloudinary::Uploader.upload(file.path)
 
     if cl_info
+      user_coords = get_user_location.split(',')
+
       item = Item.new
       item.name = params[:file_name]
       item.media_type = file.content_type
-      item.latitude = @current_user.latitude
-      item.longitude = @current_user.longitude
+      item.latitude = user_coords[0]
+      item.longitude = user_coords[1]
       item.user_id = @current_user.id
       item.cl_id = cl_info['public_id']
       item.save
