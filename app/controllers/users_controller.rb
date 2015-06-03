@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize_admin, :except => [:new]
+  before_action :authorize_admin, :except => [:new, :create]
 
   def index
     @users = User.all
