@@ -27,9 +27,31 @@ Item.create!([
   {name: "WDI9", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 2, cl_id: "rxeobsifesn80rfxgy8l"},
   {name: "Joel Turnbull", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 2, cl_id: "q84prpa4gm2fan0u3j6c"},
   {name: "Jack Jeffress", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 2, cl_id: "jwcjvrzsgynzy6srvo7a"},
-  {name: "Stella Halena", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 2, cl_id: "stella_db3mqa"}
+  {name: "Stella Halena", media_type: "image/jpeg", latitude: -33.869824, longitude: 151.206423, user_id: 2, cl_id: "stella_db3mqa"},
+  {name: "2b27b7daf0f.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "fs6jmuoq6xsbsopjuui5"},
+  {name: "2b51c478c6b.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "actehhqcevgwjlyky0ha"},
+  {name: "3d60f3b3566.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "ajwhthpytqjvz5l13s2r"},
+  {name: "4a3786f66a9.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "hwv64xgxx1h0smqighfd"},
+  {name: "5a7436b56cc.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "echcw7h0qedbfsdbudkf"},
+  {name: "5f6ed275439.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "vlahiz7qjfq5imf3nd5l"},
+  {name: "7cfee20d657.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "y92ozqdmpry45yg36zt4"},
+  {name: "9dcb6fb9f84.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "ccjkfgbvfibkpqbvgsal"},
+  {name: "85de831bd63.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "rgwpqemfpnl38adq7o6i"},
+  {name: "496ff9d5d33.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "zj8er86xxkelkjiaj0wo"},
+  {name: "0534ee717f2.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "zofhhh3krhosqh0v9oif"},
+  {name: "839c7ea3c36.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "oxfjoyqwrqfri97eskmk"},
+  {name: "2839ddc9add.jpg", media_type: "image/jpeg", latitude: -41.1670863076945, longitude: 147.736065182715, user_id: 2, cl_id: "qdrikc9dhvdxz8ztmsan"},
+  {name: "7022b599b3d.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "tjsbxwufophmtaipno22"},
+  {name: "63829c9d76b.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "xhlmwgv319xwax9y0bg9"},
+  {name: "578363c4a30.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "k8pcsluj48a0a3nebmaw"},
+  {name: "98432417a73.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "hrgkvlcjfyydqwpj1fsp"},
+  {name: "06650467222.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "gnkfucp99n4bdhtsvdgn"},
+  {name: "addcf20518d.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "vegajijafphitnte6lzg"},
+  {name: "b4d1d74f718.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "ymlg2upxqmtpzhoplidq"},
+  {name: "c242f803a5c.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "fxz8ejinsdyprhidh9ul"},
+  {name: "ca1c5f7188d.jpg", media_type: "image/jpeg", latitude: -41.1670540013085, longitude: 147.736494336157, user_id: 2, cl_id: "viiufm1a2hivy8luiv7f"}
 ])
 User.create!([
   {username: "joe", password_digest: "$2a$10$oRLEhJ6RR5aUB3e6wTolNe9y3MliWGrM5sUK4WFne9eJCrHaDZPRa", admin: false, avatar: nil, use_geoloc: true, latitude: nil, longitude: nil},
-  {username: "tobyf93", password_digest: "$2a$10$2OjyTcXm1iD4pgnS2KgGxeKQazR3DmhU5sa4kGaNLiStOHTPVYBpS", admin: true, avatar: nil, use_geoloc: true, latitude: nil, longitude: nil}
+  {username: "tobyf93", password_digest: "$2a$10$2OjyTcXm1iD4pgnS2KgGxeKQazR3DmhU5sa4kGaNLiStOHTPVYBpS", admin: true, avatar: nil, use_geoloc: false, latitude: -41.1670540013085, longitude: 147.736494336157}
 ])

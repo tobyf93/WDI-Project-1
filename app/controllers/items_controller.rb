@@ -12,9 +12,11 @@ class ItemsController < ApplicationController
 
     if cl_info
       user_coords = get_user_location.split(',')
+      file_name = file.original_filename
+      file_name = params[:file_name] if params[:file_name].present?
 
       item = Item.new
-      item.name = params[:file_name]
+      item.name = file_name
       item.media_type = file.content_type
       item.latitude = user_coords[0]
       item.longitude = user_coords[1]
