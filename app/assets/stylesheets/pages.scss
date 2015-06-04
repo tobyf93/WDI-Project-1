@@ -8,75 +8,54 @@
 
 #discover {
   margin-top: 20px;
+
+  #mapCanvas {
+    height: 428px;
+    border-radius: 4px;
+  }
+
+  #filePreview {
+    height: 695px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include vendor-prefix(transform, translate(-50%, -50%));
+      max-height: 95%;
+      max-width: 95%;
+    }
+  }
+
+  #fileList {
+    position: relative;
+
+    // The actual list
+    .list-group {
+      height: 247px;
+      overflow: scroll;
+    }
+
+    #message {
+      border: 4px dotted #f5f5f5;
+      height: 247px;
+      text-align: center;
+      padding-top: 25px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    #addBtn {
+      position: absolute;
+      z-index: 999;
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  .input-group {
+    margin-top: 5px;
+  }
 }
 
-#discover #mapCanvas {
-  height: 428px;
-  border-radius: 4px;
-}
-
-#discover #filePreview {
-  height: 695px;
-  position: relative;
-}
-
-#discover #filePreview img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  @include vendor-prefix(transform, translate(-50%, -50%));
-  max-height: 95%;
-  max-width: 95%;
-}
-
-#discover #fileList {
-  position: relative;
-}
-
-// The actual list
-#discover #fileList .list-group {
-  height: 247px;
-  overflow: scroll;
-}
-
-#discover #fileList #message {
-  border: 4px dotted #f5f5f5;
-  height: 247px;
-  text-align: center;
-  padding-top: 25px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-#discover #fileList #addBtn {
-  position: absolute;
-  z-index: 999;
-  top: 5px;
-  right: 5px;
-}
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-#discover .input-group {
-  margin-top: 5px;
-}
-
-.btn-file input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  font-size: 100px;
-  text-align: right;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  outline: none;
-  background: white;
-  cursor: inherit;
-  display: block;
-}
