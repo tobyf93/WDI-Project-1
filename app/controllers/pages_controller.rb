@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_action :authorize_user, :only => [:discover]
 
   def home
+    redirect_to discover_path if @current_user
   end
 
   def discover

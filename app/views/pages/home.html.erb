@@ -1,2 +1,35 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="home" class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="container-fluid well">
+        <img src="<%= asset_path 'locate.png' %>" alt="Locate">
+        <div class="text">
+          <span class="heading">Locate</span>
+          Utilise The Power of GPS Location
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="container-fluid well">
+        <img src="<%= asset_path 'discover.png' %>" alt="Locate">
+        <div class="text">
+          <span class="heading">Discover</span>
+          View Media Files In Your Area
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="container-fluid well">
+        <img src="<%= asset_path 'upload.png' %>" alt="Locate">
+        <div class="text">
+          <span class="heading">Upload</span>
+          Publish Your Own Content
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
