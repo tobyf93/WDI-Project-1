@@ -26,6 +26,13 @@
       max-height: 95%;
       max-width: 95%;
     }
+
+    form {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      z-index: 99999;
+    }
   }
 
   #fileList {

@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('html').on('click', '#fileList a', previewFile);
+
   $('#discover #fileUpload').on('change', function() { 
     var $input = $(this),
     numFiles = $input.get(0).files ? $input.get(0).files.length : 1,
@@ -21,6 +22,15 @@ var previewFile = function() {
 
     $('#fileList a').removeClass('active');
     $this.addClass('active');
+
+    var $deleteForm = $('#discover #deleteForm');
+    var item_id = $this.attr('data-item_id');
+    if (item_id !== '') {
+      $deleteForm.attr('action', '/items/'+item_id);
+      $deleteForm.removeClass('disabled');
+    } else {
+      $deleteForm.addClass('disabled');
+    }
   } else {
     $this.remove();
   }

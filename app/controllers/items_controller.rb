@@ -39,5 +39,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    item = Item.find params[:id]
+    item.destroy if item.user.id == @current_user.id
+    redirect_to discover_path
   end
 end

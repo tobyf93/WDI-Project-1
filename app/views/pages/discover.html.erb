@@ -10,7 +10,11 @@
           <button type="button" id="addBtn" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">+</button>
           <div class="list-group">
             <% @items.reverse_each do |item|%>
-              <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>"><%= item.name %></a>
+              <% item_id = '' %>
+              <% item_id = item.id if item.user.id == @current_user.id %>
+              <a href="#" class="list-group-item" data-cl="<%= item.cl_id %>" data-item_id="<%= item_id %>">
+                <%= item.name %>
+              </a>
             <% end %>
           </div>
         <% else %>
@@ -35,6 +39,11 @@
   <!-- Second Half - File Preview-->
   <div class="col-md-6">
     <div id="filePreview"class="container-fluid well">
+      <%= form_tag '', :method => :delete, :id => 'deleteForm', :class => 'disabled' do %>
+        <%= submit_tag 'X', :class => 'btn btn-danger btn-lg' %>
+      <% end %>
+
+      <%#= button_to 'X', new_item_path, :method => :get, :class => 'btn btn-danger btn-lg' %>
       <%= image_tag('usb.png') %>
     </div>
   </div>
@@ -70,7 +79,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <!-- <button type="button" class="btn btn-primary">Add</button> -->
           <%= submit_tag 'Add', :class => 'btn btn-success' %>
         </div>
         <% end %>
