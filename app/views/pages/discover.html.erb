@@ -21,7 +21,7 @@
           <div id="message">
             <h1>Hmmmmmm...</h1>
             <h3>No Users Have Uploaded Files Here</h3>
-            <%= link_to 'Be The First!', new_item_path, :class => 'btn btn-success btn-lg' %>
+            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Be The First!</button>
           </div>
         <% end %>
       </div>
@@ -66,7 +66,7 @@
         <%= form_tag({:controller => :items, :action => :create}, {:multipart => true}) do %>
         <div class="modal-body">
           
-          <%= text_field_tag :file_name, nil, :class => 'form-control', :placeholder => 'Human Friendly File Name' %>
+          <%= text_field_tag :file_name, nil, :class => 'form-control', :placeholder => 'File Caption' %>
           <div class="input-group">
               <span class="input-group-btn">
                   <span class="btn btn-primary btn-file">
