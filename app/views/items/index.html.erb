@@ -1,4 +1,23 @@
 <h1>All Items</h1>
-<% @user.items.each do |item| %>
-  <p><%= item.name %></p>
-<% end %>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <td>File Name</td>
+      <td>Latitude</td>
+      <td>Longitude</td>
+      <td>Date Uploaded</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.latitude %></td>
+        <td><%= item.longitude %></td>
+        <td><%= item.created_at %> (how nice does that date look)</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
