@@ -6,6 +6,21 @@
   #{$name}: #{$argument};
 }
 
+#signup {
+  margin-top: 50px;
+
+  .col-md-4 {
+    text-align: center;
+
+    .form-control {
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
 
 #locationWell {
   // width: 627px;
