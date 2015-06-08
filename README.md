@@ -15,6 +15,7 @@ Using HTML5 geolocation technologies i decided to recreate DeadDrops as a cloud-
 
 ##App Setup
 Clone the DeadDrops repository
+
 `git clone https://github.com/tobyf93/WDI-Project-1.git`
 
 Install application gems and dependencies
