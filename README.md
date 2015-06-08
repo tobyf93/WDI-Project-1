@@ -13,22 +13,16 @@ Using HTML5 geolocation technologies i decided to recreate DeadDrops as a cloud-
  * Rails 4.2.1
  * PostgreSQL 9.4.2
 
-* System dependencies
+##App Setup
+Clone the DeadDrops repository
+`git clone https://github.com/tobyf93/WDI-Project-1.git`
 
-* Configuration
+Install application gems and dependencies
+`bundle`
 
-* Database creation
+Create PostgreSQL database and execute migrations
+`rake db:create`
+`rake db:migrate`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+(optional) Update database with seed data
+`rake db:seed`
