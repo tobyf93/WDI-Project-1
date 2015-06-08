@@ -18,12 +18,18 @@ Clone the DeadDrops repository
 
 `git clone https://github.com/tobyf93/WDI-Project-1.git`
 
+
 Install application gems and dependencies
+
 `bundle`
 
+
 Create PostgreSQL database and execute migrations
+
 `rake db:create`
 `rake db:migrate`
 
+
 (optional) Update database with seed data
+
 `rake db:seed`
