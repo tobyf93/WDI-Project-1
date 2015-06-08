@@ -3,9 +3,15 @@ The 'original' DeadDrops concept originated in New York (2010) by a Berlin-based
 
 Using HTML5 geolocation technologies i decided to recreate DeadDrops as a cloud-based service.  Users can visit a location and view media files (that are within a 100m radius) that other users have dropped as well as publishing their own.  Each media item is pinned on a heatmap using a precise latitude/longitude.  
 
-#README
-* Development Stack
-  * HTML5
+##Development Stack
+* Front-End
+ * HTML5
+ * CSS3 / Sass Preprocessor
+ * JavaScript / jQuery Framework
+* Back-End
+ * Ruby 2.2.2p95
+ * Rails 4.2.1
+ * PostgreSQL 9.4.2
 
 * System dependencies
 
