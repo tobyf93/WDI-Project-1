@@ -1,11 +1,11 @@
-== README
+#Project Description
+The 'original' DeadDrops concept originated in New York (2010) by a Berlin-based artist by the name of Aram Bartholl.  It involved planting USB's in public locations using fast-setting concrete.  For more info on the original idea see http://en.wikipedia.org/wiki/USB_dead_drop.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Using HTML5 geolocation technologies i decided to recreate DeadDrops as a cloud-based service.  Users can visit a location and view media files (that are within a 100m radius) that other users have dropped as well as publishing their own.  Each media item is pinned on a heatmap using a precise latitude/longitude.  
 
-Things you may want to cover:
-
-* Ruby Version
+#README
+* Development Stack
+  * HTML5
 
 * System dependencies
 
