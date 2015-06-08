@@ -33,3 +33,7 @@ Create PostgreSQL database and execute migrations
 (optional) Update database with seed data
 
 `rake db:seed`
+
+##Notes
+* Must have PostgreSQL installed
+* Always open to feedback
